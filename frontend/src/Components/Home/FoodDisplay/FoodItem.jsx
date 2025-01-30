@@ -14,7 +14,7 @@ function FoodItem({
   removeFromCart,
 }) {
   let { url, cartList, setCartList } = useContext(Contextstore);
-  console.log(cartList);
+  //console.log(cartList);
   const [itemCount, setItemCount] = useState(cartList[id]);
 
   return (

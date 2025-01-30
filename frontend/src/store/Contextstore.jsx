@@ -17,7 +17,7 @@ const ContextstoreProvider = (props) => {
       setFoodList(response.data.data);
     } else {
       throw console.error(error);
-      console.log(response.data);
+      // console.log(response.data);
     }
   };
   const addToCart = async (itemId) => {
@@ -47,8 +47,9 @@ const ContextstoreProvider = (props) => {
       { headers: { token: localStorage.getItem("token") } }
     );
   };
-  const loadCartData = async () => {
+  const loadCartData = async (token) => {
     if (token) {
+      console.log("loading cart data");
       const response = await axios.get(url + "/api/v1/cart/get/list", {
         headers: { token: localStorage.getItem("token") },
       });
@@ -62,14 +63,13 @@ const ContextstoreProvider = (props) => {
       await fetchFood();
       if (localStorage.getItem("token")) {
         setToken(localStorage.getItem("token"));
-        await loadCartData();
+        //console.log(token);
+        await loadCartData(localStorage.getItem("token"));
       }
     };
     loadData();
   }, []);
-  useEffect(() => {
-    loadCartData();
-  }, [cartList]);
+  useEffect(() => {}, [cartList]);
   return (
     <Contextstore.Provider
       value={{

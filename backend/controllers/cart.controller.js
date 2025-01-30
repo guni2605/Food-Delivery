@@ -53,6 +53,7 @@ const getCartList = async(req,res)=>{
    try{
      const userData = await userModel.findById(req.body.userId)
     const cartData = await userData.cartData
+    console.log(cartData)
    return res.json({
       success:true,
       cartData
