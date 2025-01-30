@@ -1,0 +1,26 @@
+.heading{
+  text-align: center;
+}
+.list-table{
+  height: auto;
+  width: 80vw;
+}
+.list-table-format {
+  height: 10vh;
+  width: 100%;
+  padding: 2vw;
+  margin: 1vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+.list-table-format img{
+  height: 10vh;
+  width: 10vw;
+}
+.remove {
+  font-size: 1rem;
+  cursor: pointer;
+}

@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.footer{
+  height: 70vh;
+  width: 100%;
+  padding: 5%;
+  margin: 2vh 0;
+  display: flex;
+  align-items: center;
+  background-color: #212121e4;
+  color: #fff;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+.footer-left{
+  height: 100%;
+  width: 30vw;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-evenly;
+}
+.footer h2{
+  font-weight: 500;
+  font-size: 1rem;
+}
+.footer .img{
+  margin-top: 5vh;
+  display: flex;
+  gap: 2vw;
+}
