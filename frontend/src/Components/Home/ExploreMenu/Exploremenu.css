@@ -1,0 +1,38 @@
+.menu-bar{
+  width: 80vw;
+  height: 45vh;
+  margin: 2vh  10vw 0;
+  padding: 20px ;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2vh;
+}
+.menu-items{
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1vw;
+  overflow-x: scroll;
+
+}
+.menu-items::-webkit-scrollbar{
+  display: none;
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.item img{
+  height: 110px;
+  width: 110px;
+}
+.activate{
+  border-radius: 50%;
+  border: 5px solid orange;
+}
