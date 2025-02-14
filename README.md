@@ -4,6 +4,7 @@ A full-stack food delivery application built using the MERN (MongoDB, Express.js
 
 ![Screenshot (10)](https://github.com/user-attachments/assets/cb5a9c94-17ba-43bb-8899-b63453869e90)
 
+![Screenshot (11)](https://github.com/user-attachments/assets/a0651450-b697-4f23-8388-d44fccf2da18)
 
 
 ## Features
