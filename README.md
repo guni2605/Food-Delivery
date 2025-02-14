@@ -1,11 +1,13 @@
-# Food Delivery App
+# Food DIve a Food Delivery Web App
 
 A full-stack food delivery application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack.
+
+![Uploading Screenshot (10).png…]()
+
 
 ## Features
 
 - User authentication and authorization
-- Browse restaurants and menus
 - Food item search and filtering
 - Shopping cart functionality
 - Order placement and tracking
