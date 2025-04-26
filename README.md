@@ -22,8 +22,7 @@ A full-stack food delivery application built using the MERN (MongoDB, Express.js
 - **Frontend:**
 
   - React.js
-  - Redux for state management
-  - Tailwind CSS for styling
+  - CSS for styling
   - React Router for navigation
 
 - **Backend:**
@@ -99,7 +98,6 @@ food-delivery-app/
 │   ├── src/
 │   │   ├── components/
 │   │   ├── pages/
-│   │   ├── redux/
 │   │   └── App.js
 │   └── package.json
 └── README.md
