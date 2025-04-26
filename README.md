@@ -14,7 +14,6 @@ A full-stack food delivery application built using the MERN (MongoDB, Express.js
 - Shopping cart functionality
 - Order placement and tracking
 - User profile management
-- Restaurant reviews and ratings
 - Responsive design for all devices
 
 ## Tech Stack
