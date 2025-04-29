@@ -10,7 +10,7 @@ const ContextstoreProvider = (props) => {
   const [foodList, setFoodList] = useState([]);
   const [category, setCategory] = useState("All");
   const [cartList, setCartList] = useState([]);
-  const url = "http://localhost:4000";
+  const url = "https://food-delivery-backend-845b.onrender.com";
   const [token, setToken] = useState("");
   const fetchFood = async () => {
     const new_api = url + "/api/v1/food/list";
