@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from "react";
 import { food_list } from "../assets/frontend_assets/assets";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 export const Contextstore = createContext(null);
 
 const ContextstoreProvider = (props) => {
+  const navigate = useNavigate();
+  const [TotalPrice, setTotalPrice] = useState(0);
   const [foodList, setFoodList] = useState([]);
   const [category, setCategory] = useState("All");
   const [cartList, setCartList] = useState([]);
@@ -13,6 +15,7 @@ const ContextstoreProvider = (props) => {
   const fetchFood = async () => {
     const new_api = url + "/api/v1/food/list";
     const response = await axios.get(new_api);
+    //console.log(response);
     if (response.data.data) {
       setFoodList(response.data.data);
     } else {
@@ -53,10 +56,31 @@ const ContextstoreProvider = (props) => {
         headers: { token: localStorage.getItem("token") },
       });
       console.log(response);
-      setCartList(response.data.cartData);
+      if (response.data.cartData) setCartList(response.data.cartData);
+      else {
+        alert("Please login to view cart");
+        navigate("/signup");
+      }
     }
   };
 
+  const findPrice = () => {
+    // console.log(cartList);
+
+    let TPrice = 0;
+    foodList.forEach((item) => {
+      if (cartList[item._id]) {
+        TPrice = item.price * cartList[item._id] + TPrice;
+
+        console.log(TPrice);
+      }
+    });
+    TPrice = TPrice * 10;
+    setTotalPrice(TPrice);
+  };
+  useEffect(() => {
+    findPrice();
+  });
   useEffect(() => {
     const loadData = async () => {
       await fetchFood();
@@ -83,6 +107,8 @@ const ContextstoreProvider = (props) => {
         url,
         token,
         setToken,
+        TotalPrice,
+        setTotalPrice,
       }}
     >
       {props.children}

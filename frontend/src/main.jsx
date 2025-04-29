@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import { Home } from "./Components/Home/Home.jsx";
 import { Cart } from "./Components/Cart/Cart.jsx";
-import { PlaceOrder } from "./Components/PlaceOrder/PlaceOrder.jsx";
+
 import Layout from "./Components/Layout/Layout.jsx";
 import App from "./App.jsx";
 import ContextstoreProvider, { Contextstore } from "./store/Contextstore.jsx";

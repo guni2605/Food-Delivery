@@ -7,25 +7,34 @@ import CartList from "./CartList";
 //import { food_list } from "../../assets/frontend_assets/assets";
 export const Cart = () => {
   const navigate = useNavigate();
-  const { url, cartList, foodList, setCartList, removeFromCart } =
-    useContext(Contextstore);
+  const {
+    url,
+    cartList,
+    foodList,
+    setCartList,
+    removeFromCart,
+    TotalPrice,
+    setTotalPrice,
+  } = useContext(Contextstore);
   console.log(cartList);
-  const [TotalPrice, setTotalPrice] = useState(0);
-  const findPrice = () => {
-    // console.log(cartList);
 
-    let TPrice = 0;
-    foodList.forEach((item) => {
-      if (cartList[item._id]) {
-        TPrice = item.price * cartList[item._id] + TPrice;
-        console.log(TPrice);
-      }
-    });
-    setTotalPrice(TPrice);
-  };
-  useEffect(() => {
-    findPrice();
-  });
+  // const findPrice = () => {
+  //   // console.log(cartList);
+
+  //   let TPrice = 0;
+  //   foodList.forEach((item) => {
+  //     if (cartList[item._id]) {
+  //       TPrice = item.price * cartList[item._id] + TPrice;
+
+  //       console.log(TPrice);
+  //     }
+  //   });
+  //   TPrice = TPrice * 10;
+  //   setTotalPrice(TPrice);
+  // };
+  // useEffect(() => {
+  //   findPrice();
+  // });
   return (
     <div>
       <div className="cart-details">
@@ -33,15 +42,15 @@ export const Cart = () => {
           <h2>Cart Total Price</h2>
           <div className="cart-cont">
             <span>Subtotal :</span>
-            <span>{TotalPrice}$</span>
+            <span>{TotalPrice}Rs.</span>
           </div>
           <div className="cart-cont">
             <span>Delivery Charges:</span>
-            <span>2$</span>
+            <span>49 Rs.</span>
           </div>
           <div className="cart-cont">
             <span>Total Prices :</span>
-            <span>{TotalPrice + 2}$</span>
+            <span>{TotalPrice + 49}Rs.</span>
           </div>
           <div className="btn-div">
             <button className="btn" onClick={(e) => navigate("/delivery")}>

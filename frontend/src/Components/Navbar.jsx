@@ -5,6 +5,7 @@ import "./Navbar.css";
 import { Contextstore } from "../store/Contextstore.jsx";
 import { Link, useNavigate } from "react-router-dom";
 function Navbar({ setShowLogin }) {
+  //const navigate = useNavigate()
   const { token, setToken } = useContext(Contextstore);
   const [selectedTab, setSelectedTab] = useState("Home");
   const navigate = useNavigate();
@@ -68,7 +69,7 @@ function Navbar({ setShowLogin }) {
           <div className="user-profile">
             <img src={assets.profile_icon} className="user-logo" alt="" />
             <ul className="login-feat-list">
-              <li>
+              <li onClick={() => navigate("/myorders")}>
                 <img src={assets.bag_icon} alt="" />
                 Orders
               </li>

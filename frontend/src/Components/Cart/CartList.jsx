@@ -26,7 +26,7 @@ const CartList = () => {
             <p>{item._id.slice(10)}</p>
             <img src={url + "/images/" + item.image} alt="" />
             <h3>{item.name}</h3>
-            <p>{item.price * cartList[item._id]}</p>
+            <p>{item.price * cartList[item._id] * 10}</p>
             <p>{cartList[item._id]}</p>
             <img
               src={assets.cross_icon}
