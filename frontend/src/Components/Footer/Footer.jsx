@@ -1,41 +1,38 @@
 import React from "react";
 import "./Footer.css";
 import { assets } from "../../assets/frontend_assets/assets.js";
+
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="footer-left">
-        <img src={assets.logo} alt="" />
-        <br />
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          perspiciatis laudantium assumenda itaque pariatur, similique odit,
-          reprehenderit aperiam eos recusandae voluptatibus rerum ipsa quas ex
-          nesciunt officia! Tempore, fuga minima.
+    <footer className="footer">
+      <div className="footer-section footer-brand">
+        <h1 className="brand">Food Dive</h1>
+        <p className="description">
+          Discover delicious meals delivered to your door. Food Dive connects
+          you with your favorite local flavors and top-rated dishes.
         </p>
-        <div className="img">
-          <img src={assets.facebook_icon} alt="" />
-          <img src={assets.linkedin_icon} alt="" />
-          <img src={assets.twitter_icon} alt="" />
+        <div className="social-icons">
+          <img src={assets.facebook_icon} alt="Facebook" />
+          <img src={assets.linkedin_icon} alt="LinkedIn" />
+          <img src={assets.twitter_icon} alt="Twitter" />
         </div>
       </div>
-      <div className="footer-content">
-        <h1>Contact</h1>
-        <br />
-        <h2>Home</h2>
-        <br />
-        <h2>About</h2>
-        <br />
-        <h2>Privacy policy</h2>
+
+      <div className="footer-section footer-links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Privacy Policy</li>
+        </ul>
       </div>
-      <div className="footer-right">
-        <h1>Get In Touch</h1>
-        <br />
-        <h2>+91 17679809809</h2>
-        <br />
-        <h2>abc@gmail.com</h2>
+
+      <div className="footer-section footer-contact">
+        <h2>Get in Touch</h2>
+        <p>📞 +91 17679809809</p>
+        <p>📧 abc@gmail.com</p>
       </div>
-    </div>
+    </footer>
   );
 };
 

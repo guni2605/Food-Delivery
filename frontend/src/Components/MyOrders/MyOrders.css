@@ -1,0 +1,60 @@
+/* MyOrders.css */
+
+.my-orders-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.my-orders-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.order-item:hover {
+  transform: scale(1.02);
+}
+
+.order-item img {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.order-item div {
+  font-size: 1rem;
+  color: #444;
+  word-wrap: break-word;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item img {
+    margin-bottom: 0.5rem;
+  }
+}

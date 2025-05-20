@@ -27,8 +27,8 @@ const MyOrders = () => {
   }, []);
 
   return (
-    <div>
-      <p>MY ORDERS</p>
+    <div className="my-orders-container">
+      <p className="my-orders-title">MY ORDERS</p>
       <div className="order-items">
         {data &&
           data.map((order, index) => (
